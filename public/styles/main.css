@@ -1,0 +1,282 @@
+body {
+
+background: linear-gradient(90deg, #9500f3, #f700d5);
+background-size: 400% 400%;
+
+-webkit-animation: AnimationName 35s infinite;
+-moz-animation: AnimationName 35s infinite;
+-o-animation: AnimationName 35s infinite;
+animation: AnimationName 35s infinite;
+overflow: hidden;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+h1 {
+	font-family:'Brandon Grotesque Light';
+	font-weight:normal;
+	font-size:800%;
+	color: #fff;
+	line-height: 40px;
+	opacity: 0.85;
+	text-align:center;
+}
+
+h2 {
+  font-family:'Brandon Grotesque Light';
+  font-weight:normal;
+  font-size:540%;
+  color: #fff;
+  line-height: 20px;
+  opacity: 0.85;
+  text-align:center;
+}
+
+h3 {
+  font-family:'Brandon Grotesque Light';
+  font-weight:normal;
+  font-size:400%;
+  color: #fff;
+  line-height: 10px;
+  opacity: 0.85;
+	text-align:center;
+}
+
+.central-image {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.main {
+  width: 1100px;
+  position: absolute;
+  z-index: 2;
+  margin-left: 50%;
+  left: -550px;
+}
+
+.main-left {
+  padding-top: 150px;
+  float: left;
+  width:50%;
+}
+
+.main-left img {
+  width: 100%;
+
+}
+
+.overlay {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ z-index: 2;
+}
+
+.main-right {
+ padding-top: 150px;
+ float:right;
+ width: 50%;
+}
+
+.main-right img {
+ width: 100%;
+}
+
+#bg1 {
+	position: absolute;
+	width: 150%;
+	left: -50%;
+	height: 150%;
+	background-image: url(../images/bg1.png);
+	z-index: 0;
+	opacity: 0.7;
+}
+
+#bg2 {
+	position: absolute;
+  width: 150%;
+  left: -50%;
+  height: 150%;
+  background-image: url(../images/bg2.png);
+	z-index: 0;
+	opacity: 0.6;
+ }
+
+ #bg3 {
+  position: absolute;
+  width: 150%;
+  left: -50%;
+  height: 150%;
+  background-image: url(../images/bg3.png);
+  z-index: 0;
+  opacity: 0.5;
+ }
+
+.band-open {
+  opacity: 0.95;
+  position: absolute;
+  top: 230px;
+  left: 20px;
+  width: 350px;
+  height: 350px;
+  z-index: 4;
+  clip-path: polygon(50% 50%, 0 0, 0 100%);
+  background-color: #fff;
+
+  animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.band-open-text {
+  font-family:'Brandon Grotesque Light';
+  font-weight:normal;
+  font-size:160%;
+  color: #9500f3;
+  padding-left: 10px;
+	text-align:left;
+  margin-top: 155px;
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 7px); }
+    to   { transform: translate(0, -0px); }
+}
+
+.bands {
+  display: none;
+  width:100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(255,255,255,0.5);
+  left:0;
+  top: 0;
+  z-index: 3;
+}
+
+.band1 {
+  opacity: 0;
+  position: absolute;
+  z-index: 4;
+  top: 20px;
+  left: -140px;
+  width: 500px;
+  height: 500px;
+  clip-path: polygon(90% 0, 45% 45%, 100% 100%);
+  animation-delay: 1s;
+  background-image: url("../images/sti.jpg");
+  animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    background-size: cover;
+
+}
+
+.band1text {
+  font-family:'Brandon Grotesque Light';
+  font-weight:normal;
+  font-size:200%;
+  color: #fff;
+  padding-right: 30px;
+
+	text-align:right;
+  margin-top: 200px;
+}
+
+
+.band2 {
+  opacity: 0;
+  position: absolute;
+  z-index: 5;
+  top: 200px;
+  left: 0px;
+  width: 500px;
+  height: 500px;
+  clip-path: polygon(0% 90%, 45% 45%, 100% 100%);
+  background-image: url("../images/sti2.jpg");
+  transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+  animation-delay: 2s;
+  animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    background-size: cover;
+}
+
+.band2text {
+  font-family:'Brandon Grotesque Light';
+  font-weight:normal;
+  font-size:200%;
+  color: #fff;
+  padding-left: 140px;
+  width: 220px;
+	text-align:left;
+  margin-top: 320px;
+}
+
+.band3 {
+  opacity: 0;
+  position: absolute;
+  z-index: 5;
+  top: 20px;
+  left: 330px;
+  width: 500px;
+  height: 500px;
+  background-image: url("../images/sti2.jpg");
+  transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+  animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  clip-path: polygon(70% 0, 0 0, 10% 100%);
+  animation-delay: 1.5s;
+  background-size: cover;
+
+}
+
+.band4 {
+  opacity: 0;
+  position: absolute;
+  z-index: 5;
+  top: 20px;
+  left: 360px;
+  width: 500px;
+  height: 500px;
+  background-image: url("../images/2sir.jpg");
+  transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+  animation-name: floating;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  clip-path: polygon(70% 0, 0 120%, 70% 70%);
+  animation-delay: 2s;
+  background-size: cover;
+
+}
