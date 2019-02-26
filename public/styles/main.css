@@ -150,6 +150,10 @@ h3 {
     animation-timing-function: ease-in-out;
 }
 
+.band-open:hover {
+  opacity: 1;
+}
+
 .band-open-text {
   font-family:'Brandon Grotesque Light';
   font-weight:normal;
@@ -157,7 +161,6 @@ h3 {
   color: #9500f3;
   padding-left: 10px;
 	text-align:left;
-
 
 }
 
@@ -182,9 +185,13 @@ h3 {
   z-index: 3;
 }
 
+
 .bandtext {
   font-size:32px;
 }
+
+
+
 
 #band1 {
   opacity: 0;
@@ -301,6 +308,7 @@ h3 {
 
 }
 
+
 .triangles {
   width:100%;
   height: 100%;
@@ -322,4 +330,9 @@ h3 {
   animation-timing-function: ease-in-out;
   animation-delay: 2s;
   background-size: cover;
+}
+
+.bandtext:hover {
+  opacity: 1;
+  color: #9500f3;
 }

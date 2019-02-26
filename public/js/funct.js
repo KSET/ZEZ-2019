@@ -59,16 +59,16 @@ function openBands() {
     });
   $('.bands').show(100);
   $('#band1').animate({
-    opacity: 0.9
+    opacity: 0.8
   });
   $('#band2').delay(100).animate({
-    opacity: 0.9
+    opacity: 0.8
   });
   $('#band3').delay(150).animate({
-    opacity: 0.9
+    opacity: 0.8
   });
   $('#band4').delay(200).animate({
-    opacity: 0.9
+    opacity: 0.8
   },  function() {
     i = 1;
   });
@@ -180,6 +180,9 @@ function generateTriangles(width, height, maxid) {
 
 }
 */
+var opacity;
+$('.band').mouseenter(function() { opacity = $('.band').css('opacity'); $(this).css('opacity', '1') }).mouseleave(function() { $(this).css('opacity', opacity) });
+
 resizeBands();
  height= parseInt($(window).height()/2)
 setInterval(moveBackground, 30);
