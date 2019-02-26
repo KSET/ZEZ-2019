@@ -18,8 +18,8 @@ function reverseString(str) {
 function resizeBands() {
   width = 1373;
   height = 753;
-  actualWidth = $('body').width();
-  actualHeight = $('body').height();
+  actualWidth = $(window).width();
+  actualHeight = $(window).height();
   xFactor = actualWidth/width;
   yFactor = actualHeight/height;
   $('.bandtext').css('font-size', parseInt($('.bandtext').css('font-size').replace('px','')*yFactor)+'px');
@@ -102,7 +102,7 @@ function openBands() {
 
 }
 
-window.onload = (function() {
+$( document ).ready(function() {
 
 const el1 = document.querySelector("#bg1");
 const el2 = document.querySelector("#bg2");
