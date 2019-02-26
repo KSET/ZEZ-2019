@@ -153,11 +153,16 @@ h3 {
 .band-open-text {
   font-family:'Brandon Grotesque Light';
   font-weight:normal;
-  font-size:160%;
+  font-size:25px;
   color: #9500f3;
   padding-left: 10px;
 	text-align:left;
-  margin-top: 155px;
+
+
+}
+
+#flipper {
+  display: inline-block;
 }
 
 @keyframes floating {
@@ -177,25 +182,28 @@ h3 {
   z-index: 3;
 }
 
-.band {
-
+.bandtext {
+  font-size:32px;
 }
 
 #band1 {
   opacity: 0;
   position: absolute;
   z-index: 4;
-  top: 20px;
-  left: -140px;
-  width: 500px;
-  height: 500px;
-  clip-path: polygon(90% 0, 45% 45%, 100% 100%);
+  top: 40px;
+  left: 0px;
+  width: 350px;
+  height: 450px;
+  clip-path: polygon(90% 0, 0 25%, 100% 100%);
+    background-image: url("../images/sti.jpg");
+  /*
   animation-delay: 1s;
-  background-image: url("../images/sti.jpg");
+
   animation-name: floating;
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+    */
     background-size: cover;
 
 }
@@ -203,12 +211,13 @@ h3 {
 #band1text {
   font-family:'Brandon Grotesque Light';
   font-weight:normal;
-  font-size:200%;
+
   color: #fff;
-  padding-right: 30px;
-  width: 450px;
-	text-align:right;
-  margin-top: 200px;
+  width: 300px;
+  text-align: center;
+  margin-top: 100px;
+  padding-left: 50px;
+
 }
 
 
@@ -216,31 +225,33 @@ h3 {
   opacity: 0;
   position: absolute;
   z-index: 5;
-  top: 200px;
+  top: 420px;
   left: 0px;
   width: 500px;
-  height: 500px;
-  clip-path: polygon(0% 90%, 45% 45%, 100% 100%);
+  height: 300px;
+  clip-path: polygon(45% 0, 0 80%, 100% 100%);
   background-image: url("../images/sti2.jpg");
   transform: translatey(0px);
+  /*
 	animation: float 6s ease-in-out infinite;
   animation-delay: 2s;
   animation-name: floating;
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+  */
     background-size: cover;
 }
 
 #band2text {
   font-family:'Brandon Grotesque Light';
   font-weight:normal;
-  font-size:200%;
+
   color: #fff;
-  padding-left: 140px;
-  width: 220px;
-	text-align:left;
-  margin-top: 320px;
+  width: 300px;
+  text-align: center;
+  margin-top: 100px;
+  padding-left: 70px;
 }
 
 #band3 {
@@ -252,15 +263,17 @@ h3 {
   width: 500px;
   height: 500px;
   background-image: url("../images/sti2.jpg");
+    clip-path: polygon(70% 0, 0 0, 10% 100%);
+    background-size: cover;
+  /*
   transform: translatey(0px);
 	animation: float 6s ease-in-out infinite;
   animation-name: floating;
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-  clip-path: polygon(70% 0, 0 0, 10% 100%);
   animation-delay: 1.5s;
-  background-size: cover;
+  */
 
 }
 
@@ -273,14 +286,17 @@ h3 {
   width: 500px;
   height: 500px;
   background-image: url("../images/2sir.jpg");
+  clip-path: polygon(70% 0, 0 120%, 70% 70%);
+  /*
   transform: translatey(0px);
 	animation: float 6s ease-in-out infinite;
   animation-name: floating;
     animation-duration: 3.5s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-  clip-path: polygon(70% 0, 0 120%, 70% 70%);
+
   animation-delay: 2s;
+  */
   background-size: cover;
 
 }
