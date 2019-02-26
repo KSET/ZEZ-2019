@@ -177,7 +177,11 @@ h3 {
   z-index: 3;
 }
 
-.band1 {
+.band {
+
+}
+
+#band1 {
   opacity: 0;
   position: absolute;
   z-index: 4;
@@ -196,19 +200,19 @@ h3 {
 
 }
 
-.band1text {
+#band1text {
   font-family:'Brandon Grotesque Light';
   font-weight:normal;
   font-size:200%;
   color: #fff;
   padding-right: 30px;
-
+  width: 450px;
 	text-align:right;
   margin-top: 200px;
 }
 
 
-.band2 {
+#band2 {
   opacity: 0;
   position: absolute;
   z-index: 5;
@@ -228,7 +232,7 @@ h3 {
     background-size: cover;
 }
 
-.band2text {
+#band2text {
   font-family:'Brandon Grotesque Light';
   font-weight:normal;
   font-size:200%;
@@ -239,7 +243,7 @@ h3 {
   margin-top: 320px;
 }
 
-.band3 {
+#band3 {
   opacity: 0;
   position: absolute;
   z-index: 5;
@@ -260,7 +264,7 @@ h3 {
 
 }
 
-.band4 {
+#band4 {
   opacity: 0;
   position: absolute;
   z-index: 5;
@@ -279,4 +283,27 @@ h3 {
   animation-delay: 2s;
   background-size: cover;
 
+}
+
+.triangles {
+  width:100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(255,255,255,0.5);
+  left:0;
+  top: 0;
+  z-index: 3;
+}
+
+.triangle {
+  position: absolute;
+  z-index: 5;
+  background-image: url("../images/2sir.jpg");
+	animation: float 6s ease-in-out infinite;
+  animation-name: floating;
+  animation-duration: 3.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 2s;
+  background-size: cover;
 }
