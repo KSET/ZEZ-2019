@@ -26,7 +26,7 @@ function resizeBands() {
   $('.band-open-text').css('font-size', parseInt($('.band-open-text').css('font-size').replace('px','')*yFactor)+'px');
   for(j=0; j<5; j++) {
   $('#band'+j).height(parseInt($('#band'+j).height()*xFactor));
-  $('#band'+j).width(parseInt($('#band'+j).width()*yFactor));
+  $('#band'+j).width(parseInt($('#band'+j).width()*xFactor));
   $('#band'+j).css('left', parseInt($('#band'+j).css('left').replace('px','')*xFactor)+'px');
   $('#band'+j).css('top', parseInt($('#band'+j).css('top').replace('px','')*yFactor)+'px');
 
@@ -34,9 +34,9 @@ function resizeBands() {
   if($('#band'+j+'text').css('width'))
   $('#band'+j+'text').width(parseInt($('#band'+j+'text').width()*yFactor));
   if($('#band'+j+'text').css('margin-top'))
-  $('#band'+j+'text').css('margin-top', parseInt($('#band'+j+'text').css('margin-top').replace('px','')*yFactor)+'px');
+  $('#band'+j+'text').css('margin-top', parseInt($('#band'+j+'text').css('margin-top').replace('px','')*xFactor)+'px');
   if($('#band'+j+'text').css('padding-left'))
-  $('#band'+j+'text').css('padding-left', parseInt($('#band'+j+'text').css('padding-left').replace('px','')*yFactor)+'px');
+  $('#band'+j+'text').css('padding-left', parseInt($('#band'+j+'text').css('padding-left').replace('px','')*xFactor)+'px');
   if($('#band'+j+'text').css('padding-right'))
   $('#band'+j+'text').css('padding-right', parseInt($('#band'+j+'text').css('padding-right').replace('px','')*yFactor)+'px');
 
@@ -57,6 +57,9 @@ function openBands() {
       $('#flipper').css('transform', 'scaleX(-1)');
       $('#flipper').animate({ opacity:1 });
     });
+  $('.main').delay(0).animate({
+      opacity: 0
+    });
   $('.bands').show(100);
   $('#band1').animate({
     opacity: 0.8
@@ -64,10 +67,13 @@ function openBands() {
   $('#band2').delay(100).animate({
     opacity: 0.8
   });
-  $('#band3').delay(150).animate({
+  $('#band3').delay(200).animate({
     opacity: 0.8
   });
-  $('#band4').delay(200).animate({
+  $('#band4').delay(300).animate({
+    opacity: 0.8
+  });
+  $('#band5').delay(400).animate({
     opacity: 0.8
   },  function() {
     i = 1;
@@ -81,18 +87,27 @@ function openBands() {
     $('#flipper').animate({ opacity:1 });
   });
 
-  $('#band4').delay(50).animate({
+  $('#band5').delay(0).animate({
     opacity: 0
   });
-  $('#band2').delay(150).animate({
+  $('#band4').delay(100).animate({
     opacity: 0
   });
-  $('#band3').delay(100).animate({
+  $('#band2').delay(200).animate({
     opacity: 0
   });
-  $('#band1').delay(200).animate({
+  $('#band3').delay(300).animate({
+    opacity: 0
+  });
+  $('#band3').delay(0).animate({
+    opacity: 0
+  });
+  $('#band1').delay(400).animate({
     opacity: 0
 }, function() {
+  $('.main').delay(0).animate({
+    opacity: 1
+  }, 1000);
   $('.bands').hide(100);
   $('.band-open-text').css('transform', 'none');
   i = 0;
@@ -181,7 +196,16 @@ function generateTriangles(width, height, maxid) {
 }
 */
 var opacity;
-$('.band').mouseenter(function() { opacity = $('.band').css('opacity'); $(this).css('opacity', '1') }).mouseleave(function() { $(this).css('opacity', opacity) });
+$('.band').mouseenter(function() {
+  opacity = $('.band').css('opacity');
+   $(this).animate({
+     opacity: 1
+   });
+}).mouseleave(function() {
+  $(this).animate({
+    opacity: 0.8
+  });
+});
 
 resizeBands();
  height= parseInt($(window).height()/2)
