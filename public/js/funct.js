@@ -23,6 +23,8 @@ function resizeBands() {
   xFactor = actualWidth/width;
   yFactor = actualHeight/height;
   $('.bandtext').css('font-size', parseInt($('.bandtext').css('font-size').replace('px','')*yFactor)+'px');
+  $('.main-left').css('padding-top', parseInt($('.main-left').css('padding-top').replace('px','')*yFactor)+'px');
+  $('.main-right').css('padding-top', parseInt($('.main-right').css('padding-top').replace('px','')*yFactor)+'px');
   $('.band-open-text').css('font-size', parseInt($('.band-open-text').css('font-size').replace('px','')*yFactor)+'px');
   for(j=0; j<6; j++) {
   $('#band'+j).height(parseInt($('#band'+j).height()*xFactor));
