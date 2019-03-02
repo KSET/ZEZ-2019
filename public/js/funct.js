@@ -62,19 +62,19 @@ function openBands() {
     });
   $('.bands').show(100);
   $('#band1').animate({
-    opacity: 0.8
+    opacity: 0.9
   });
   $('#band2').delay(100).animate({
-    opacity: 0.8
+    opacity: 0.9
   });
   $('#band3').delay(200).animate({
-    opacity: 0.8
+    opacity: 0.9
   });
   $('#band4').delay(300).animate({
-    opacity: 0.8
+    opacity: 0.9
   });
   $('#band5').delay(400).animate({
-    opacity: 0.8
+    opacity: 0.9
   },  function() {
     i = 1;
   });
@@ -203,7 +203,7 @@ $('.band').mouseenter(function() {
    });
 }).mouseleave(function() {
   $(this).animate({
-    opacity: 0.8
+    opacity: 0.9
   });
 });
 
