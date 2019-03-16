@@ -1,13 +1,6 @@
 body {
-
-background: linear-gradient(90deg, #9500f3, #f700d5);
-background-size: 400% 400%;
-
--webkit-animation: AnimationName 35s infinite;
--moz-animation: AnimationName 35s infinite;
--o-animation: AnimationName 35s infinite;
-animation: AnimationName 35s infinite;
-overflow: hidden;
+  padding: 0px;
+  margin: 0px;
 }
 
 @-webkit-keyframes AnimationName {
@@ -34,37 +27,42 @@ overflow: hidden;
 h1 {
 	font-family:'Brandon Grotesque Light';
 	font-weight:normal;
-	font-size:800%;
-	color: #fff;
-	line-height: 40px;
-	opacity: 0.85;
+	font-size:4em;
+  letter-spacing: 0.4em;
+	color: #000;
+  margin-top: 0px;
+	opacity: 0.7;
 	text-align:center;
 }
 
 h2 {
   font-family:'Brandon Grotesque Light';
   font-weight:normal;
-  font-size:540%;
-  color: #fff;
-  line-height: 20px;
-  opacity: 0.85;
-  text-align:center;
+  font-size:3em;
+  color: #000;
+  opacity: 0.6;
+  text-align: right;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  line-height: 1em;
 }
 
 h3 {
   font-family:'Brandon Grotesque Light';
   font-weight:normal;
-  font-size:400%;
-  color: #fff;
-  line-height: 10px;
-  opacity: 0.85;
-	text-align:center;
+  font-size:3em;
+  color: #000;
+  margin-top: 0px;
+  opacity: 0.6;
+	text-align: right;
+  line-height: 1em;
 }
 
 .central-image {
   margin-left: auto;
   margin-right: auto;
   display: block;
+
 }
 
 .main {
@@ -73,34 +71,67 @@ h3 {
   z-index: 2;
   margin-left: 50%;
   left: -550px;
+  overflow: visible;
+  padding-top: 120px;
 }
 
 .main-left {
-  padding-top: 150px;
+
   float: left;
-  width:50%;
-}
-
-.main-left img {
-  width: 100%;
+  width:470px;
+  position: relative;
+  overflow: visible;
 
 }
+
+.main-left .central-image {
+  margin-top: 100px;
+  width: 95%;
+  left: 5%;
+  position: absolute;
+  z-index: 10;
+
+}
+
+
 
 .overlay {
  position: absolute;
- width: 100%;
- height: 100%;
+ width: 470px;
+ height: 470px;
  z-index: 2;
+ top: 5px;
+/*clip-path: polygon(0% 0%, 0% 100%, 5% 100%, 5% 4%, 95% 4%, 95% 96%, 5% 96%, 0% 100%, 100% 100%, 100% 0%); */
+overflow: hidden;
+background: linear-gradient(-45deg, #fc074f ,#f40bb1);
+background-size: 400% 400%;
+
+-webkit-animation: AnimationName 35s infinite;
+-moz-animation: AnimationName 35s infinite;
+-o-animation: AnimationName 35s infinite;
+animation: AnimationName 35s infinite;
+overflow: hidden;
 }
 
 .main-right {
- padding-top: 150px;
+
  float:right;
- width: 50%;
+ width: 450px;
 }
 
 .main-right img {
  width: 100%;
+
+}
+
+.trokutic1 {
+  position: absolute;
+  z-index: 9;
+  animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
 }
 
 #bg1 {
@@ -145,10 +176,7 @@ h3 {
   clip-path: polygon(50% 50%, 0 0, 0 100%);
   background-color: #fff;
 
-  animation-name: floating;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+
 }
 
 .band-open:hover {
@@ -414,3 +442,7 @@ h3 {
   opacity: 1;
   color: #9500f3;
 }
+
+
+
+/* MOBILE */

@@ -1,0 +1,154 @@
+
+html {
+  padding: 0px;
+
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+
+.main {
+  width:100%;
+}
+
+.main-left {
+  text-align: center;
+  min-width: 200px;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.main-right {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.main-right img {
+  width: 60%;
+}
+
+.main-left img {
+  width: 60%;
+}
+
+h1 {
+  font-family:'Brandon Grotesque Light';
+  font-weight:normal;
+  font-size:300%;
+  color: #000;
+  opacity: 0.85;
+  line-height: 80%;
+  text-align:center;
+  margin:20px 0px 0px 0px;
+}
+
+h2 {
+  font-family:'Brandon Grotesque Light';
+  font-weight:normal;
+  margin-top: 10px;
+  font-size:190%;
+  color: #000;
+  opacity: 0.85;
+  text-align:center;
+  margin:0px;
+}
+
+h3 {
+  font-family:'Brandon Grotesque Light';
+  font-weight:normal;
+  font-size:150%;
+  color: #000;
+  line-height: 10px;
+  opacity: 0.85;
+  text-align:center;
+  margin: 0px;
+}
+
+.band-open {
+  display: none;
+}
+
+.bands {
+  margin-top: 30px;
+}
+
+.band {
+  overflow: hidden;
+  display: block;
+  position: relative;
+  border-left: 5px solid #fff;
+  border-top: 5px solid #fff;
+  border-right: 5px solid #fff;
+  background-position: center;
+}
+
+.bandtext {
+  font-family:'Brandon Grotesque Light';
+  color: #000;
+  font-size: 200%;
+  padding: 15px 0 15px 0;
+  text-shadow: 3px 3px #fff;
+  text-align: center;
+}
+
+.bandtext br {
+  display: none;
+}
+
+.bandtext i {
+  display: none;
+}
+
+.date {
+
+  display: block;
+}
+
+#overlay {
+  position: absolute; /* Sit on top of the page content */
+  display: block; /* Hidden by default */
+  top:0px;
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  background-color: rgba(149,0,243,0.2); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+#band1 {
+    background-image: url("../images/luce.png");
+    background-size: cover;
+
+}
+
+
+
+#band2 {
+  background-image: url("../images/izlozba.jpg");
+    background-size: cover;
+}
+
+
+#band3 {
+  background-image: url("../images/bv.jpg");
+  background-size: cover;
+
+}
+
+#band4 {
+  background-image: url("../images/npv.jpg");
+  background-size: cover;
+
+}
+
+#band5 {
+  background-image: url("../images/ic3.jpg");
+  background-size: cover;
+
+}

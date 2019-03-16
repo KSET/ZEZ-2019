@@ -121,9 +121,11 @@ function openBands() {
 
 $( document ).ready(function() {
 
-const el1 = document.querySelector("#bg1");
-const el2 = document.querySelector("#bg2");
-const el3 = document.querySelector("#bg3");
+if($(window).width() >= 1000) {
+
+//const el1 = document.querySelector("#bg1");
+//const el2 = document.querySelector("#bg2");
+//const el3 = document.querySelector("#bg3");
 
 var offX = 0;
 var offY = 0;
@@ -144,14 +146,14 @@ if(counter == 500) {
   counter++;
   offX += plusOrMinusX*2;
   offY += plusOrMinusY*2;
-  el1.style.backgroundPositionX = -(offX*0.1) + "px";
-  el1.style.backgroundPositionY = -(offY*0.1) + "px";
+  //el1.style.backgroundPositionX = -(offX*0.1) + "px";
+  //el1.style.backgroundPositionY = -(offY*0.1) + "px";
 
-  el2.style.backgroundPositionX = -(offX*0.05) + "px";
-  el2.style.backgroundPositionY = -(offY*0.05) + "px";
+  //el2.style.backgroundPositionX = -(offX*0.05) + "px";
+  //el2.style.backgroundPositionY = -(offY*0.05) + "px";
 
-  el3.style.backgroundPositionX = -(offX*0.02) + "px";
-  el3.style.backgroundPositionY = -(offY*0.02) + "px";
+  //el3.style.backgroundPositionX = -(offX*0.02) + "px";
+  //el3.style.backgroundPositionY = -(offY*0.02) + "px";
 
 
 }
@@ -213,5 +215,5 @@ resizeBands();
  height= parseInt($(window).height()/2)
 setInterval(moveBackground, 30);
 //generateTriangles(300, height, 10);
-
+}
 });
