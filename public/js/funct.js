@@ -59,27 +59,37 @@ function openBands() {
       $('#flipper').css('transform', 'scaleX(-1)');
       $('#flipper').animate({ opacity:1 });
     });
-  $('.main').delay(0).animate({
+  $('.main-left img').delay(0).animate({
       opacity: 0
     });
+    $('.main-right').delay(0).animate({
+        opacity: 0
+      }, function() {
+
+        $('.overlay').delay(0).animate({
+            width: $(window).width()
+          } , 1000, 'easeInBack', function() {
+            $('#band2').animate({
+              opacity: 1
+            }, 500, 'easeOutQuad');
+            $('#band1').delay(100).animate({
+              opacity: 1
+            }, 500, 'easeOutQuad');
+            $('#band3').delay(200).animate({
+              opacity: 1
+            }, 500, 'easeOutQuad');
+            $('#band4').delay(300).animate({
+              opacity: 1
+            }, 500, 'easeOutQuad');
+            $('#band5').delay(400).animate({
+              opacity: 1
+            }, 500, 'easeOutQuad',  function() {
+              i = 1;
+            });
+          });
+      });
   $('.bands').show(100);
-  $('#band1').animate({
-    opacity: 0.9
-  });
-  $('#band2').delay(100).animate({
-    opacity: 0.9
-  });
-  $('#band3').delay(200).animate({
-    opacity: 0.9
-  });
-  $('#band4').delay(300).animate({
-    opacity: 0.9
-  });
-  $('#band5').delay(400).animate({
-    opacity: 0.9
-  },  function() {
-    i = 1;
-  });
+
 } else if(i == 1) {
   $('#flipper').animate({
       opacity: 0
@@ -87,6 +97,16 @@ function openBands() {
     $('#flipper').css('-webkit-transform', 'none');
     $('#flipper').css('transform', 'none');
     $('#flipper').animate({ opacity:1 });
+    $('.overlay').delay(0).animate({
+        width: 470
+      } , 1000, 'easeOutCirc', function() {
+        $('.main-left img').delay(0).animate({
+            opacity: 1
+          });
+          $('.main-right').delay(0).animate({
+              opacity: 1
+            });
+      });
   });
 
   $('#band5').delay(0).animate({
@@ -199,17 +219,6 @@ function generateTriangles(width, height, maxid) {
 
 }
 */
-var opacity;
-$('.band').mouseenter(function() {
-  opacity = $('.band').css('opacity');
-   $(this).animate({
-     opacity: 1
-   });
-}).mouseleave(function() {
-  $(this).animate({
-    opacity: 0.9
-  });
-});
 
 resizeBands();
  height= parseInt($(window).height()/2)

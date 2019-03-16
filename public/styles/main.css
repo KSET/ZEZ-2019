@@ -164,6 +164,36 @@ overflow: hidden;
   opacity: 0.5;
  }
 
+
+#flipper {
+  display: inline-block;
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 7px); }
+    to   { transform: translate(0, -0px); }
+}
+
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: block; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(149,0,243,0.1); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+.band:hover #overlay {
+  background-color: rgba(149,0,243,0.3);
+}
+
 .band-open {
   cursor: pointer;
   opacity: 0.95;
@@ -195,32 +225,44 @@ overflow: hidden;
 
 .band {
   cursor: pointer;
-}
-
-#flipper {
-  display: inline-block;
-}
-
-@keyframes floating {
-    from { transform: translate(0,  0px); }
-    65%  { transform: translate(0, 7px); }
-    to   { transform: translate(0, -0px); }
+  float: left;
+  width: 110px;
+  margin-left: 0px;
+  height: 520px;
+  opacity: 0;
+  overflow: hidden;
+  background-position: center;
+  border: 7px solid #fff;
 }
 
 .bands {
-  display: none;
-  width:100%;
-  height: 100%;
+  width: 100%;
   position: absolute;
-
   left:0;
-  top: 0;
-  z-index: 3;
+  top: 90px;
+  z-index: 10;
 }
 
+.date {
+  position: absolute;
+  bottom: 0px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.band:hover .date {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
 
 .bandtext {
-  font-size:35px;
+  font-size:2em;
+  background: #fff;
+  font-family:'Brandon Grotesque Light';
+  font-weight:normal;
+
+  color: #000;
+  text-align: center;
 }
 
 .bandtext i {
@@ -249,169 +291,78 @@ overflow: hidden;
 }
 
 
-#overlay {
-  position: fixed; /* Sit on top of the page content */
-  display: block; /* Hidden by default */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(149,0,243,0.1); /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
-}
-
-.band:hover #overlay {
-  background-color: rgba(149,0,243,0.3);
-}
-
 
 #band1 {
-  opacity: 0;
-  position: absolute;
-  z-index: 4;
-  top: 0px;
-  left: 80px;
-  width: 300px;
-  height: 350px;
-  clip-path: polygon(59% 0, 100% 53%, 45% 100%, 0 66%, 0 14%);
-    background-image: url("../images/luce.png");
-    background-size: cover;
-
+  background-image: url("../images/luce.png");
+  background-size: cover;
+  transition: background-image 2s;
 }
 
-#band1text {
-  font-family:'Brandon Grotesque Light';
-  font-weight:normal;
-  text-shadow: 3px 3px #fff;
-  color: #000;
-  width: 250px;
-  text-align: center;
-  margin-top: 50px;
-  padding-left: 0px;
-  position: absolute;
-  z-index: 4;
+#band1:hover {
+  background-image: url("../images/luce2.png");
+    background-size: cover;
+    transition: background-image 0.5s;
 
 }
 
 
 #band2 {
-  opacity: 0;
-  position: absolute;
-  z-index: 5;
-  top: 420px;
-  left: 80px;
-  width: 300px;
-  height: 300px;
-  clip-path: polygon(100% 37%, 98% 100%, 22% 100%, 0 47%, 52% 0);
   background-image: url("../images/izlozba.jpg");
-  transform: translatey(0px);
-  /*
-	animation: float 6s ease-in-out infinite;
-  animation-delay: 2s;
-  animation-name: floating;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-  */
     background-size: cover;
+    transition: background-image 2s;
+
 }
 
-#band2text {
-  position: absolute;
-  z-index: 4;
-  font-family:'Brandon Grotesque Light';
-  font-weight:normal;
-  text-shadow: 3px 3px #000;
-  color: #fff;
-  width: 350px;
-  text-align: center;
-  margin-top: 120px;
-  padding-left: 0px;
+#band2:hover {
+  background-image: url("../images/izlozba2.jpg");
+    background-size: cover;
+    transition: background-image 0.5s;
+
 }
+
 
 #band3 {
-  opacity: 0;
-  position: absolute;
-  z-index: 5;
-  top: 210px;
-  left: 280px;
-  width: 300px;
-  height: 300px;
+
   background-image: url("../images/bv.jpg");
-  clip-path: polygon(100% 27%, 100% 72%, 34% 100%, 0 54%, 36% 0);
+  background-size: cover;
+transition: background-image 2s;
+
+}
+
+#band3:hover {
+  background-image: url("../images/bv2.jpg");
     background-size: cover;
+    transition: background-image 0.5s;
 
 }
 
-#band3text {
-  font-family:'Brandon Grotesque Light';
-  font-weight:normal;
-  text-shadow: 3px 3px #000;
-  color: #fff;
-  width: 300px;
-  text-align: center;
-  margin-top: 70px;
-  padding-left: 0px;
-  position: absolute;
-  z-index: 4;
-}
 
 #band4 {
-  opacity: 0;
-  position: absolute;
-  z-index: 5;
-  top: 400px;
-  left: 410px;
-  width: 320px;
-  height: 300px;
+
   background-image: url("../images/npv.jpg");
-  clip-path: polygon(100% 45%, 100% 82%, 21% 100%, 0 51%, 61% 15%);
   background-size: cover;
+transition: background-image 2s;
 
 }
 
-#band4text {
-  font-family:'Brandon Grotesque Light';
-  font-weight:normal;
-  text-shadow: 3px 3px #000;
-  color: #fff;
-  width: 300px;
-  text-align: center;
-  margin-top: 90px;
-  padding-left: 20px;
-  position: absolute;
-  z-index: 4;
-}
+#band4:hover {
+  background-image: url("../images/npv2.jpg");
+    background-size: cover;
+    transition: background-image 0.5s;
 
+}
 
 #band5 {
-  opacity: 0;
-  position: absolute;
-  z-index: 5;
-  top: 5px;
-  left: 380px;
-  width: 340px;
-  height: 320px;
   background-image: url("../images/ic3.jpg");
-  clip-path: polygon(68% 0, 100% 38%, 75% 85%, 0 41%, 0 22%);
   background-size: cover;
-
+  transition: background-image 2s;
 }
 
-#band5text {
-  font-family:'Brandon Grotesque Light';
-  font-weight:normal;
-  text-shadow: 3px 3px #000;
-  color: #fff;
-  width: 320px;
-  text-align: center;
-  margin-top: 50px;
-  padding-left: 50px;
-  position: absolute;
-  z-index: 4;
+#band5:hover {
+  background-image: url("../images/ic32.jpg");
+    background-size: cover;
+    transition: background-image 0.5s;
+
 }
 
 
@@ -438,7 +389,7 @@ overflow: hidden;
   background-size: cover;
 }
 
-.bandtext:hover {
+.band:hover .bandtext {
   opacity: 1;
   color: #9500f3;
 }
