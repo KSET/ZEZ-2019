@@ -1,6 +1,7 @@
 body {
   padding: 0px;
   margin: 0px;
+  overflow: hidden;
 }
 
 @-webkit-keyframes AnimationName {
@@ -198,12 +199,12 @@ overflow: hidden;
   cursor: pointer;
   opacity: 0.95;
   position: absolute;
-  top: 230px;
-  left: 20px;
-  width: 350px;
-  height: 350px;
+  top: 250px;
+  left: 0px;
   z-index: 4;
-  clip-path: polygon(50% 50%, 0 0, 0 100%);
+  -ms-transform: rotate(-90deg); /* IE 9 */
+  -webkit-transform: rotate(-90deg); /* Safari */
+  transform: rotate(-90deg);
   background-color: #fff;
 
 
@@ -216,7 +217,7 @@ overflow: hidden;
 .band-open-text {
   font-family:'Brandon Grotesque Light';
   font-weight:normal;
-  font-size:25px;
+  font-size:2.5em;
   color: #9500f3;
   padding-left: 10px;
 	text-align:left;
@@ -224,6 +225,7 @@ overflow: hidden;
 }
 
 .band {
+  position: relative;
   cursor: pointer;
   float: left;
   width: 110px;
@@ -247,12 +249,18 @@ overflow: hidden;
   position: absolute;
   bottom: 0px;
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.8s;
+  font-family:'Brandon Grotesque Light';
+  color: #9500f3;
+  font-size: 2.5em;
+  text-align: center;
+  width: 100%;
+  background: #fff;
 }
 
 .band:hover .date {
   opacity: 1;
-  transition: opacity 0.3s;
+  transition: opacity 0.5s;
 }
 
 .bandtext {

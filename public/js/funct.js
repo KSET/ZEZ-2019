@@ -220,7 +220,7 @@ function generateTriangles(width, height, maxid) {
 }
 */
 
-resizeBands();
+//resizeBands();
  height= parseInt($(window).height()/2)
 setInterval(moveBackground, 30);
 //generateTriangles(300, height, 10);
