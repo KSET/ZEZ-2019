@@ -132,18 +132,25 @@ animation-iteration-count: infinite;
 animation-timing-function: ease-in-out;
 */
 
+.para {
+  transition: top 0.1s;
 
+}
 
 .trokutic2 {
+
+
   top:-150px;
   left: 200px;
   position: absolute;
   z-index: 1;
   height: 450px;
 
+
 }
 
 .trokutic3 {
+
   height: 1000px;
   position: absolute;
   z-index: 10;
@@ -153,6 +160,7 @@ animation-timing-function: ease-in-out;
 }
 
 .trokutic4 {
+
   position: absolute;
   z-index: 10;
   height: 450px;
@@ -162,6 +170,7 @@ animation-timing-function: ease-in-out;
 }
 
 .trokutic5 {
+
   position: absolute;
   z-index: 9;
   height: 300px;
@@ -172,6 +181,7 @@ animation-timing-function: ease-in-out;
 
 
 .trokutic6 {
+
   left:130px;
   top: -60px;
   height: 250px;
