@@ -228,7 +228,7 @@ setInterval(moveBackground, 30);
 
 var currentX = '';
 var currentY = '';
-var movementConstant = .003;
+var movementConstant = .002;
 $(document).mousemove(function(e) {
   if(currentX == '') currentX = e.pageX;
   var xdiff = e.pageX - currentX;
@@ -241,8 +241,8 @@ $(document).mousemove(function(e) {
 	  var movementy = (i + 1) * (ydiff * movementConstant);
       var newX = $(el).position().left + movement;
 	  var newY = $(el).position().top + movementy;
-      $(el).css('left', newX + 'px');
-	  $(el).css('top', newY + 'px');
+      $(el).animate({'left': newX + 'px', 'top': newY + 'px'}, 2);
+
   });
 });
 //generateTriangles(300, height, 10);

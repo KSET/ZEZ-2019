@@ -133,16 +133,13 @@ animation-timing-function: ease-in-out;
 */
 
 .para {
-  transition-property: left,top;
-  transition-duration: .1s, .1s;
+
 
 }
 
 .trokutic2 {
-
-
   top:-150px;
-  left: 200px;
+  left: 240px;
   position: absolute;
   z-index: 1;
   height: 450px;
