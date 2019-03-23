@@ -2,6 +2,7 @@ body {
   padding: 0px;
   margin: 0px;
   overflow: hidden;
+
 }
 
 @-webkit-keyframes AnimationName {
@@ -83,14 +84,15 @@ h3 {
   position: relative;
   overflow: visible;
 
+
 }
 
 .main-left .central-image {
-  margin-top: 100px;
-  width: 95%;
-  left: 5%;
+  margin-top: 110px;
+  width: 430px;
+left: 35px;
   position: absolute;
-  z-index: 10;
+  z-index: 9;
 
 }
 
@@ -98,14 +100,14 @@ h3 {
 
 .overlay {
  position: absolute;
- width: 470px;
- height: 470px;
+ width: 450px;
+ height: 450px;
  z-index: 2;
  top: 5px;
 /*clip-path: polygon(0% 0%, 0% 100%, 5% 100%, 5% 4%, 95% 4%, 95% 96%, 5% 96%, 0% 100%, 100% 100%, 100% 0%); */
 overflow: hidden;
 background: linear-gradient(-45deg, #fc074f ,#f40bb1);
-background-size: 400% 400%;
+background-size: 200% 200%;
 
 -webkit-animation: AnimationName 35s infinite;
 -moz-animation: AnimationName 35s infinite;
@@ -124,14 +126,117 @@ overflow: hidden;
  width: 100%;
 
 }
+/*
+animation-duration: 3s;
+animation-iteration-count: infinite;
+animation-timing-function: ease-in-out;
+*/
 
-.trokutic1 {
+
+
+.trokutic2 {
+  top:-150px;
+  left: 200px;
+  position: absolute;
+  z-index: 1;
+  height: 450px;
+
+}
+
+.trokutic3 {
+  height: 1000px;
+  position: absolute;
+  z-index: 10;
+  left: -280px;
+  top: -250px;
+
+}
+
+.trokutic4 {
+  position: absolute;
+  z-index: 10;
+  height: 450px;
+  top: 220px;
+  left: -120px
+
+}
+
+.trokutic5 {
   position: absolute;
   z-index: 9;
-  animation-name: floating;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+  height: 300px;
+    top: -160px;
+    left: -130px;
+
+}
+
+
+.trokutic6 {
+  left:130px;
+  top: -60px;
+  height: 250px;
+  position: absolute;
+  z-index: 9;
+
+
+
+}
+
+
+.trokutic7 {
+  position: absolute;
+  z-index: 9;
+  height: 140px;
+top: 90px;
+left: 90px;
+
+}
+
+
+.trokutic8 {
+  position: absolute;
+  z-index: 9;
+  height: 700px;
+left: -150px;
+top: -120px;
+
+}
+
+
+.trokutic9 {
+  position: absolute;
+  z-index: 9;
+  height: 330px;
+top: -40px;
+left: 30px;
+
+}
+
+
+.trokutic10 {
+  position: absolute;
+  z-index: 9;
+  height: 90px;
+  top: 360px;
+  left: 350px;
+
+}
+
+.trokutic11 {
+  position: absolute;
+  z-index: 9;
+  height: 50px;
+top: 250px;
+left: 30px;
+
+}
+
+.trokutic12 {
+  position: absolute;
+  z-index: 9;
+  height: 550px;
+  top: 450px;
+  left: 530px;
 
 }
 
@@ -199,7 +304,7 @@ overflow: hidden;
   cursor: pointer;
   opacity: 0.95;
   position: absolute;
-  top: 250px;
+  top: 450px;
   left: 0px;
   z-index: 4;
   -ms-transform: rotate(-90deg); /* IE 9 */

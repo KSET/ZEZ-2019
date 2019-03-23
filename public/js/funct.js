@@ -157,6 +157,8 @@ var plusOrMinusY;
   plusOrMinusY = Math.random() < 0.5 ? -1 : 1;
 
 
+
+
 function moveBackground() {
 if(counter == 500) {
   plusOrMinusX = Math.random() < 0.5 ? -1 : 1;
@@ -223,6 +225,26 @@ function generateTriangles(width, height, maxid) {
 //resizeBands();
  height= parseInt($(window).height()/2)
 setInterval(moveBackground, 30);
+
+var currentX = '';
+var currentY = '';
+var movementConstant = .003;
+$(document).mousemove(function(e) {
+  if(currentX == '') currentX = e.pageX;
+  var xdiff = e.pageX - currentX;
+  currentX = e.pageX;
+   if(currentY == '') currentY = e.pageY;
+  var ydiff = e.pageY - currentY;
+  currentY = e.pageY;
+  $('.para').each(function(i, el) {
+      var movement = (i + 1) * (xdiff * movementConstant);
+	  var movementy = (i + 1) * (ydiff * movementConstant);
+      var newX = $(el).position().left + movement;
+	  var newY = $(el).position().top + movementy;
+      $(el).css('left', newX + 'px');
+	  $(el).css('top', newY + 'px');
+  });
+});
 //generateTriangles(300, height, 10);
 }
 });
