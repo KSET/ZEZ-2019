@@ -133,7 +133,8 @@ animation-timing-function: ease-in-out;
 */
 
 .para {
-  transition: top 0.1s;
+  transition-property: left,top;
+  transition-duration: .1s, .1s;
 
 }
 
