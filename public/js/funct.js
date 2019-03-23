@@ -228,7 +228,7 @@ setInterval(moveBackground, 30);
 
 var currentX = '';
 var currentY = '';
-var movementConstant = .002;
+var movementConstant = .004;
 $(document).mousemove(function(e) {
   if(currentX == '') currentX = e.pageX;
   var xdiff = e.pageX - currentX;

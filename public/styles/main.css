@@ -88,7 +88,7 @@ h3 {
 }
 
 .main-left .central-image {
-  margin-top: 110px;
+  top: 100px;
   width: 430px;
 left: 35px;
   position: absolute;
@@ -109,10 +109,10 @@ overflow: hidden;
 background: linear-gradient(-45deg, #fc074f ,#f40bb1);
 background-size: 200% 200%;
 
--webkit-animation: AnimationName 35s infinite;
--moz-animation: AnimationName 35s infinite;
--o-animation: AnimationName 35s infinite;
-animation: AnimationName 35s infinite;
+-webkit-animation: AnimationName 15s infinite;
+-moz-animation: AnimationName 15s infinite;
+-o-animation: AnimationName 15s infinite;
+animation: AnimationName 15s infinite;
 overflow: hidden;
 }
 
@@ -206,7 +206,7 @@ left: 90px;
   z-index: 9;
   height: 700px;
 left: -150px;
-top: -120px;
+top: -130px;
 
 }
 
@@ -214,9 +214,9 @@ top: -120px;
 .trokutic9 {
   position: absolute;
   z-index: 9;
-  height: 330px;
-top: -40px;
-left: 30px;
+  height: 320px;
+top: -47px;
+left: 37px;
 
 }
 
@@ -245,6 +245,24 @@ left: 30px;
   height: 550px;
   top: 450px;
   left: 530px;
+
+}
+
+.trokutic13 {
+  position: absolute;
+  z-index: 11;
+height: 150px;
+top: -73px;
+left: 130px;
+
+}
+
+.trokutic14 {
+  position: absolute;
+  z-index: 10;
+height: 600px;
+top: -55px;
+left: -110px;
 
 }
 
