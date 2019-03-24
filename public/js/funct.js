@@ -83,6 +83,21 @@ function openBands() {
             }, 500, 'easeOutQuad');
             $('#band5').delay(400).animate({
               opacity: 1
+            }, 500, 'easeOutQuad');
+            $('#band6').delay(500).animate({
+              opacity: 1
+            }, 500, 'easeOutQuad');
+            $('#band7').delay(600).animate({
+              opacity: 1
+            }, 500, 'easeOutQuad');
+            $('#band8').delay(700).animate({
+              opacity: 1
+            }, 500, 'easeOutQuad');
+            $('#band9').delay(800).animate({
+              opacity: 1
+            }, 500, 'easeOutQuad');
+            $('#band10').delay(900).animate({
+              opacity: 1
             }, 500, 'easeOutQuad',  function() {
               i = 1;
             });
@@ -109,7 +124,22 @@ function openBands() {
       });
   });
 
-  $('#band5').delay(0).animate({
+  $('#band10').delay(0).animate({
+    opacity: 0
+  });
+  $('#band9').delay(100).animate({
+    opacity: 0
+  });
+  $('#band8').delay(100).animate({
+    opacity: 0
+  });
+  $('#band7').delay(100).animate({
+    opacity: 0
+  });
+  $('#band6').delay(100).animate({
+    opacity: 0
+  });
+  $('#band5').delay(100).animate({
     opacity: 0
   });
   $('#band4').delay(100).animate({
@@ -119,9 +149,6 @@ function openBands() {
     opacity: 0
   });
   $('#band3').delay(300).animate({
-    opacity: 0
-  });
-  $('#band3').delay(0).animate({
     opacity: 0
   });
   $('#band1').delay(400).animate({

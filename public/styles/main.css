@@ -369,7 +369,7 @@ left: -110px;
 }
 
 .bands {
-  width: 100%;
+  width: 120%;
   position: absolute;
   left:0;
   top: 90px;
@@ -395,13 +395,22 @@ left: -110px;
 }
 
 .bandtext {
-  font-size:2em;
+  position: absolute;
+  opacity: 0.8;
+  font-size:1.8em;
   background: #fff;
   font-family:'Brandon Grotesque Light';
   font-weight:normal;
-
   color: #000;
-  text-align: center;
+  text-align: left;
+  -ms-transform: rotate(-45deg); /* IE 9 */
+  -webkit-transform: rotate(-45deg); /* Safari */
+  transform: rotate(-77deg);
+    top: 208px;
+    width: 470px;
+    left: -260px;
+    padding-bottom: 0px;
+    padding-left: 195px;
 }
 
 .bandtext i {
@@ -499,6 +508,71 @@ transition: background-image 2s;
 
 #band5:hover {
   background-image: url("../images/ic32.jpg");
+    background-size: cover;
+    transition: background-image 0.5s;
+
+}
+
+#band6 {
+  background-image: url("../images/bod.jpg");
+  background-size: cover;
+  transition: background-image 2s;
+}
+
+#band6:hover {
+  background-image: url("../images/bod2.jpg");
+    background-size: cover;
+    transition: background-image 0.5s;
+
+}
+
+#band7 {
+  background-image: url("../images/mapalma.jpg");
+  background-size: cover;
+  transition: background-image 2s;
+}
+
+#band7:hover {
+  background-image: url("../images/mapalma2.jpg");
+    background-size: cover;
+    transition: background-image 0.5s;
+
+}
+
+#band8 {
+  background-image: url("../images/bnnt.jpg");
+  background-size: cover;
+  transition: background-image 2s;
+}
+
+#band8:hover {
+  background-image: url("../images/bnnt2.jpg");
+    background-size: cover;
+    transition: background-image 0.5s;
+
+}
+
+#band9 {
+  background-image: url("../images/karma.jpg");
+  background-size: cover;
+  transition: background-image 2s;
+}
+
+#band9:hover {
+  background-image: url("../images/karma2.jpg");
+    background-size: cover;
+    transition: background-image 0.5s;
+
+}
+
+#band10 {
+  background-image: url("../images/bl.jpg");
+  background-size: cover;
+  transition: background-image 2s;
+}
+
+#band10:hover {
+  background-image: url("../images/bl2.jpg");
     background-size: cover;
     transition: background-image 0.5s;
 
