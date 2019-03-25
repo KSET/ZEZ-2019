@@ -11,7 +11,9 @@ body {
   overflow-x: hidden;
 }
 
-
+.pconly {
+	display: none;
+}
 
 .main {
   width:100%;
@@ -30,22 +32,23 @@ body {
 }
 
 .main-right img {
-  width: 60%;
+	
+  width: 250px;
 }
 
 .main-left img {
-  width: 60%;
+  width: 100%;
 }
 
 h1 {
   font-family:'Brandon Grotesque Light';
   font-weight:normal;
-  font-size:300%;
+  font-size:3em;
   color: #000;
   opacity: 0.85;
-  line-height: 80%;
+ letter-spacing: 0.14em;
   text-align:center;
-  margin:20px 0px 0px 0px;
+  margin:0px 0px 0px 0px;
 }
 
 h2 {
@@ -91,23 +94,26 @@ h3 {
 .bandtext {
   font-family:'Brandon Grotesque Light';
   color: #000;
-  font-size: 200%;
+  font-size: 2em;
   padding: 15px 0 15px 0;
-  text-shadow: 3px 3px #fff;
-  text-align: center;
+  opacity: 1;
+  text-align: right;
+	width: 290px;
+  padding: 5px 10px 5px 10px;
+  margin-bottom:50px;
+	background: #fff;
 }
 
-.bandtext br {
-  display: none;
-}
-
-.bandtext i {
-  display: none;
-}
 
 .date {
-
   display: block;
+  font-family:'Brandon Grotesque Light';
+  font-size: 2em;
+   padding: 5px 10px 5px 10px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  color: #fff;
 }
 
 #overlay {
@@ -121,34 +127,74 @@ h3 {
   cursor: pointer; /* Add a pointer on hover */
 }
 
+
+.band {
+	background-position: center;
+	background-size: cover;
+	
+}
+
 #band1 {
     background-image: url("../images/luce.png");
-    background-size: cover;
-
+    background-position: center 22%;
 }
 
 
 
 #band2 {
   background-image: url("../images/izlozba.jpg");
-    background-size: cover;
+  background-position: center 50%;
 }
 
 
 #band3 {
   background-image: url("../images/bv.jpg");
-  background-size: cover;
-
+background-position: center 25%;
 }
 
 #band4 {
   background-image: url("../images/npv.jpg");
-  background-size: cover;
+background-position: center 25%;
 
 }
 
 #band5 {
   background-image: url("../images/ic3.jpg");
-  background-size: cover;
+  background-position: center 10%;
 
 }
+
+#band6 {
+  background-image: url("../images/bod.jpg");
+background-position: center 20%;
+
+}
+
+
+#band7 {
+  background-image: url("../images/mapalma.jpg");
+background-position: center 0%;
+
+}
+
+
+#band8 {
+  background-image: url("../images/bnnt.jpg");
+background-position: center 15%;
+
+}
+
+
+#band9 {
+  background-image: url("../images/karma.jpg");
+  background-position: center 12%;
+  
+}
+
+
+#band10 {
+  background-image: url("../images/bl.jpg");
+  background-position: center 25%;
+
+}
+
