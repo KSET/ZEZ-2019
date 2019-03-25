@@ -6,7 +6,7 @@ body {
 }
 
 .mobileonly {
-	display: none;
+	display: none !important;
 }
 
 @-webkit-keyframes AnimationName {
@@ -604,7 +604,7 @@ transition: background-image 2s;
   animation-timing-function: ease-in-out;
   animation-delay: 2s;
   background-size: cover;
-  
+
 }
 
 .band:hover .bandtext {

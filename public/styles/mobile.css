@@ -32,7 +32,7 @@ body {
 }
 
 .main-right img {
-	
+
   width: 55%;
 }
 
@@ -94,7 +94,7 @@ h3 {
 .bandtext {
   font-family:'Brandon Grotesque Light';
   color: #000;
-  font-size: 1.8em;
+  font-size: 1.5em;
   padding: 15px 0 15px 0;
   opacity: 1;
   text-align: right;
@@ -131,11 +131,11 @@ h3 {
 .band {
 	background-position: center;
 	background-size: cover;
-	
+
 }
 
 #band1 {
-    background-image: url("../images/luce.png");
+    background-image: url("../images/luce3.png");
     background-position: center 22%;
 }
 
@@ -148,53 +148,52 @@ h3 {
 
 
 #band3 {
-  background-image: url("../images/bv.jpg");
+  background-image: url("../images/bv3.jpg");
 background-position: center 25%;
 }
 
 #band4 {
-  background-image: url("../images/npv.jpg");
+  background-image: url("../images/npv3.jpg");
 background-position: center 25%;
 
 }
 
 #band5 {
-  background-image: url("../images/ic3.jpg");
+  background-image: url("../images/ic33.jpg");
   background-position: center 10%;
 
 }
 
 #band6 {
-  background-image: url("../images/bod.jpg");
+  background-image: url("../images/bod3.jpg");
 background-position: center 20%;
 
 }
 
 
 #band7 {
-  background-image: url("../images/mapalma.jpg");
+  background-image: url("../images/mapalma3.jpg");
 background-position: center 0%;
 
 }
 
 
 #band8 {
-  background-image: url("../images/bnnt.jpg");
+  background-image: url("../images/bnnt3.jpg");
 background-position: center 15%;
 
 }
 
 
 #band9 {
-  background-image: url("../images/karma.jpg");
+  background-image: url("../images/karma3.jpg");
   background-position: center 12%;
-  
+
 }
 
 
 #band10 {
-  background-image: url("../images/bl.jpg");
+  background-image: url("../images/bl3.jpg");
   background-position: center 25%;
 
 }
-
