@@ -78,13 +78,11 @@ h3 {
 }
 
 .main-left {
-
+  display: flex;
   float: left;
   width:470px;
   position: relative;
   overflow: visible;
-
-
 }
 
 .main-left .central-image {
@@ -132,10 +130,6 @@ animation-iteration-count: infinite;
 animation-timing-function: ease-in-out;
 */
 
-.para {
-
-
-}
 
 .trokutic2 {
   top:-150px;
@@ -328,30 +322,32 @@ left: -110px;
 
 .band-open {
   cursor: pointer;
-  opacity: 0.95;
+  opacity: 0.8;
   position: absolute;
-  top: 450px;
-  left: 0px;
+  top: 0px;
   z-index: 4;
-  -ms-transform: rotate(-90deg); /* IE 9 */
-  -webkit-transform: rotate(-90deg); /* Safari */
-  transform: rotate(-90deg);
-  background-color: #fff;
+  background-color: #fc074f;
+background: linear-gradient(-45deg, #fc074f ,#f40bb1);
+color: #fff;
+transition: opacity 1s, transform 1s;
 
 
 }
 
 .band-open:hover {
   opacity: 1;
+    -ms-transform: rotate(-90deg); /* IE 9 */
+  -webkit-transform: rotate(-90deg); /* Safari */
+  transform: rotate(-90deg);
 }
 
 .band-open-text {
   font-family:'Brandon Grotesque Light';
   font-weight:normal;
   font-size:2.5em;
-  color: #9500f3;
-  padding-left: 10px;
+  padding: 10px 20px 10px 20px;
 	text-align:left;
+
 
 }
 
@@ -361,7 +357,7 @@ left: -110px;
   float: left;
   width: 110px;
   margin-left: 0px;
-  height: 520px;
+  height: 465px;
   opacity: 0;
   overflow: hidden;
   background-position: center;
@@ -372,7 +368,7 @@ left: -110px;
   width: 120%;
   position: absolute;
   left:0;
-  top: 90px;
+  top: 125px;
   z-index: 10;
 }
 
@@ -396,15 +392,15 @@ left: -110px;
 
 .bandtext {
   position: absolute;
-  opacity: 0.8;
-  font-size:1.8em;
+  opacity: 0.7;
+  font-size:2em;
   background: #fff;
   font-family:'Brandon Grotesque Light';
   font-weight:normal;
   color: #000;
   text-align: left;
-  -ms-transform: rotate(-45deg); /* IE 9 */
-  -webkit-transform: rotate(-45deg); /* Safari */
+  -ms-transform: rotate(-77deg); /* IE 9 */
+  -webkit-transform: rotate(-77deg); /* Safari */
   transform: rotate(-77deg);
     top: 208px;
     width: 470px;
@@ -589,6 +585,10 @@ transition: background-image 2s;
   z-index: 3;
 }
 
+.para {
+	display: block;
+}
+
 .triangle {
   position: absolute;
   z-index: 5;
@@ -600,6 +600,7 @@ transition: background-image 2s;
   animation-timing-function: ease-in-out;
   animation-delay: 2s;
   background-size: cover;
+  
 }
 
 .band:hover .bandtext {

@@ -15,6 +15,17 @@ function reverseString(str) {
     return joinArray; // "olleh"
 }
 
+function parallaxIt(e, target, movement) {
+  var $this = $(".main");
+  var relX = e.pageX - $this.offset().left;
+  var relY = e.pageY - $this.offset().top;
+
+  TweenMax.to(target, 1, {
+    x: (relX - $this.width() / 2) / $this.width() * movement,
+    y: (relY - $this.height() / 2) / $this.height() * movement
+  });
+}
+
 function resizeBands() {
   width = 1373;
   height = 753;
@@ -22,17 +33,17 @@ function resizeBands() {
   actualHeight = $(window).height();
   xFactor = actualWidth/width;
   yFactor = actualHeight/height;
-  $('.bandtext').css('font-size', parseInt($('.bandtext').css('font-size').replace('px','')*yFactor)+'px');
-  $('.main-left').css('padding-top', parseInt($('.main-left').css('padding-top').replace('px','')*yFactor)+'px');
-  $('.main-right').css('padding-top', parseInt($('.main-right').css('padding-top').replace('px','')*yFactor)+'px');
-  $('.band-open-text').css('font-size', parseInt($('.band-open-text').css('font-size').replace('px','')*yFactor)+'px');
-  for(j=0; j<6; j++) {
-  $('#band'+j).height(parseInt($('#band'+j).height()*xFactor));
-  $('#band'+j).width(parseInt($('#band'+j).width()*xFactor));
-  $('#band'+j).css('left', parseInt($('#band'+j).css('left').replace('px','')*xFactor)+'px');
-  $('#band'+j).css('top', parseInt($('#band'+j).css('top').replace('px','')*yFactor)+'px');
+ // $('.bandtext').css('font-size', parseInt($('.bandtext').css('font-size').replace('px','')*yFactor)+'px');
+  $('.main').css('padding-top', parseInt($('.main').css('padding-top').replace('px','')*yFactor)+'px');
+ // $('.main-right').css('padding-top', parseInt($('.main-right').css('padding-top').replace('px','')*yFactor)+'px');
+ // $('.band-open-text').css('font-size', parseInt($('.band-open-text').css('font-size').replace('px','')*yFactor)+'px');
+ // for(j=0; j<6; j++) {
+ // $('#band'+j).height(parseInt($('#band'+j).height()*xFactor));
+ // $('#band'+j).width(parseInt($('#band'+j).width()*xFactor));
+ // $('#band'+j).css('left', parseInt($('#band'+j).css('left').replace('px','')*xFactor)+'px');
+ // $('#band'+j).css('top', parseInt($('#band'+j).css('top').replace('px','')*yFactor)+'px');
 
-
+/*
   if($('#band'+j+'text').css('width'))
   $('#band'+j+'text').width(parseInt($('#band'+j+'text').width()*yFactor));
   if($('#band'+j+'text').css('margin-top'))
@@ -44,12 +55,13 @@ function resizeBands() {
 
   }
   $('.band-open-text').css('margin-top', parseInt($('#band0').height()/2-$('.band-open-text').height()/2)+'px');
+  */
 }
 
 var i = 0;
-
+var offset = 0;
 function openBands() {
-
+ 
   if(i == 0) {
     i = 3;
     $('#flipper').animate({
@@ -65,9 +77,10 @@ function openBands() {
     $('.main-right').delay(0).animate({
         opacity: 0
       }, function() {
-
+		console.log(($('.overlay').offset().left));
         $('.overlay').delay(0).animate({
-            width: $(window).width()
+            width: $(window).width(),
+			left: ($('.overlay').offset().left*-1)
           } , 1000, 'easeInBack', function() {
             $('#band2').animate({
               opacity: 1
@@ -113,7 +126,8 @@ function openBands() {
     $('#flipper').css('transform', 'none');
     $('#flipper').animate({ opacity:1 });
     $('.overlay').delay(0).animate({
-        width: 470
+        width: 470,
+		left: 0
       } , 1000, 'easeOutCirc', function() {
         $('.main-left img').delay(0).animate({
             opacity: 1
@@ -145,13 +159,13 @@ function openBands() {
   $('#band4').delay(100).animate({
     opacity: 0
   });
-  $('#band2').delay(200).animate({
+  $('#band3').delay(200).animate({
     opacity: 0
   });
-  $('#band3').delay(300).animate({
+  $('#band1').delay(300).animate({
     opacity: 0
   });
-  $('#band1').delay(400).animate({
+  $('#band2').delay(400).animate({
     opacity: 0
 }, function() {
   $('.main').delay(0).animate({
@@ -249,10 +263,30 @@ function generateTriangles(width, height, maxid) {
 }
 */
 
-//resizeBands();
+resizeBands();
  height= parseInt($(window).height()/2)
 setInterval(moveBackground, 30);
 
+offset = $('.overlay').offset().left;
+$('.bands').css('left', (-1*offset+($(window).width()/12)/3)+'px');
+$('.bands').css('width', ($(window).width())+'px');
+$('.bands').css('top', ($('.overlay').offset().top-15)+'px');
+$('.band').css('width', ($(window).width()/12)+'px');
+
+$("body").mousemove(function(e) {
+
+  parallaxIt(e, ".trokutic2", 4);
+  parallaxIt(e, ".trokutic4", 30);
+  parallaxIt(e, ".trokutic5", 3);
+  parallaxIt(e, ".trokutic6", 10);
+  parallaxIt(e, ".trokutic7", 8);
+  parallaxIt(e, ".trokutic10", 11);
+  parallaxIt(e, ".trokutic11", 12);
+  parallaxIt(e, ".trokutic12", 2);
+  parallaxIt(e, ".central-image.para", 10);
+
+});
+/*
 var currentX = '';
 var currentY = '';
 var movementConstant = .004;
@@ -271,7 +305,8 @@ $(document).mousemove(function(e) {
       $(el).animate({'left': newX + 'px', 'top': newY + 'px'}, 2);
 
   });
-});
+});*/
+
 //generateTriangles(300, height, 10);
 }
 });
