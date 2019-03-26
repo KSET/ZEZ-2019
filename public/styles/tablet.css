@@ -18,7 +18,7 @@ body {
 
 .main {
   width:100%;
-  max-width: 380px;
+  max-width: 630px;
   margin-left: auto;
   margin-right: auto;
   opacity: 0;
@@ -48,10 +48,10 @@ body {
 h1 {
   font-family:'Brandon Grotesque Light';
   font-weight:normal;
-  font-size:2.4em;
+  font-size:3.6em;
   color: #000;
   opacity: 0.85;
- letter-spacing: 0.14em;
+ letter-spacing: 0.25em;
   text-align:center;
   margin:0px 0px 0px 0px;
 }
@@ -60,7 +60,7 @@ h2 {
   font-family:'Brandon Grotesque Light';
   font-weight:normal;
   margin-top: 10px;
-  font-size:1.8em;
+  font-size:2.5em;
   color: #000;
   opacity: 0.85;
   text-align:center;
@@ -70,7 +70,7 @@ h2 {
 h3 {
   font-family:'Brandon Grotesque Light';
   font-weight:normal;
-  font-size:1.6em;
+  font-size:2.2em;
   color: #000;
   line-height: 10px;
   opacity: 0.85;
@@ -84,6 +84,8 @@ h3 {
 
 .bands {
   margin-top: 30px;
+  position: relative;
+  overflow: auto;
 }
 
 .band {
@@ -94,6 +96,11 @@ h3 {
   border-top: 5px solid #fff;
   border-right: 5px solid #fff;
   background-position: center;
+  box-sizing: border-box;
+  background-position: center;
+  background-size: cover;
+  width: 50%;
+  float: left;
 }
 
 .bandtext {
@@ -132,12 +139,6 @@ h3 {
   cursor: pointer; /* Add a pointer on hover */
 }
 
-
-.band {
-	background-position: center;
-	background-size: cover;
-
-}
 
 #band1 {
     background-image: url("../images/luce3.png");
@@ -203,12 +204,6 @@ background-position: center 15%;
 
 }
 
-.footer {
-	height: 20px;
-	text-align: center;
-	padding: 20px 0px 20px 0px;
-}
-
 @-webkit-keyframes rotating /* Safari and Chrome */ {
   from {
     -webkit-transform: rotate(0deg);
@@ -257,3 +252,9 @@ background-position: center 15%;
 }
 
 
+
+.footer {
+	height: 20px;
+	text-align: center;
+	padding: 20px 0px 20px 0px;
+}

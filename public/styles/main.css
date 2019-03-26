@@ -79,6 +79,7 @@ h3 {
   left: -550px;
   overflow: visible;
   padding-top: 120px;
+  opacity: 0;
 }
 
 .main-left {
@@ -334,7 +335,7 @@ left: -110px;
 background: linear-gradient(-45deg, #fc074f ,#f40bb1);
 color: #fff;
 transition: opacity 1s, transform 1s;
-
+opacity: 0;
 
 }
 
@@ -357,7 +358,6 @@ transition: opacity 1s, transform 1s;
 
 .band {
   position: relative;
-  cursor: pointer;
   float: left;
   width: 110px;
   margin-left: 0px;
@@ -411,6 +411,7 @@ transition: opacity 1s, transform 1s;
     left: -260px;
     padding-bottom: 0px;
     padding-left: 195px;
+	  cursor: pointer;
 }
 
 .bandtext i {
@@ -610,6 +611,53 @@ transition: background-image 2s;
 .band:hover .bandtext {
   opacity: 1;
   color: #9500f3;
+}
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+	height: 100%;
+	width: 100%;
+	z-index: 100;
+	position: absolute;
+	display: table-cell;
+	text-align: center;
+	top: 0px;
+}
+
+.loader img {
+  -webkit-animation: rotating 2s linear infinite;
+  -moz-animation: rotating 2s linear infinite;
+  -ms-animation: rotating 2s linear infinite;
+  -o-animation: rotating 2s linear infinite;
+  animation: rotating 2s linear infinite;
 }
 
 

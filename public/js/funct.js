@@ -26,6 +26,10 @@ function parallaxIt(e, target, movement) {
   });
 }
 
+function openLink(link) {
+	window.open(link, '_blank');
+}
+
 function resizeBands() {
   width = 1373;
   height = 753;
@@ -181,6 +185,23 @@ function openBands() {
 }
 
 $( document ).ready(function() {
+	
+	
+$('body').waitForImages(function() {
+    // All descendant images have loaded, now slide up.
+	$('.loader').animate({
+    opacity: 0
+  }, function() {
+	  $('.loader').css('display', 'none');
+	  $('.main').animate({
+    opacity: 1
+  });
+  $('.band-open').animate({
+    opacity: 1
+  });
+  });
+
+});
 
 if($(window).width() >= 1000) {
 
