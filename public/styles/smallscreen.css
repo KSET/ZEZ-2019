@@ -106,6 +106,12 @@ h3 {
   background-size: cover;
   width: 33.33%;
   float: left;
+  opacity: 0.9;
+}
+
+.band:active {
+	opacity: 1;
+	transition: opacity 0.2s;
 }
 
 .bandtext {

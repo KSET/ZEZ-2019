@@ -94,6 +94,12 @@ h3 {
   border-top: 5px solid #fff;
   border-right: 5px solid #fff;
   background-position: center;
+  opacity: 0.9;
+}
+
+.band:active {
+	opacity: 1;
+	transition: opacity 0.2s;
 }
 
 .bandtext {
