@@ -106,12 +106,22 @@ h3 {
   background-size: cover;
   width: 33.33%;
   float: left;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .band:active {
 	opacity: 1;
 	transition: opacity 0.2s;
+}
+
+.band:active .bandtext{
+  background-color: #9500f3;
+  background: linear-gradient(-45deg, #fc074f ,#f40bb1);
+  color: #fff;
+}
+
+.band:active .date {
+  color: #fc074f;
 }
 
 .bandtext {
@@ -159,7 +169,7 @@ h3 {
 
 
 #band2 {
-  background-image: url("../images/izlozba.jpg");
+  background-image: url("../images/izlozba3.jpg");
   background-position: center 50%;
 }
 
@@ -267,4 +277,3 @@ background-position: center 15%;
   -o-animation: rotating 2s linear infinite;
   animation: rotating 2s linear infinite;
 }
-
